@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+
+<script>
+    document.write("Javascript is enable")
+</script>
+<hello-world></hello-world>
+<script>
+    class HelloWorld extends HTMLElement {
+        constructor() {
+            super(); 
+            this.innerHTML = "<p>Hello world!</p>"; 
+        }
+    }
+    customElements.define("hello-world", HelloWorld);
+</script>
+
+<noscript>
+    <p>You are disabling JavaScript, if you want to have the best experience, please turn it on.</p>
+</noscript>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="dog.png">
+
+    <style>
+        body {
+            background-color: #d5e9e6; 
+            margin: 0;
+        }
+
+        custom-css {
+            font-size: 25px;
+            color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header style = "background-color: #5d82c2; width: 100%; align-items: center; display: flex;">
+        <h1 style="font-style: italic; font-size: 50px; padding: 0px 15px">Experiment</h1>
+        <a href="homepage.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 500px"><svg width="20" height="20"><circle cx="20" cy="20" r="30" fill="black"/></svg></button></a>
+        <a href="contact.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Contact</button></a>
+        <a href="resume.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Resume</button></a>
+        <a href="project.html"><button style="padding: 10px 23px; font-size: 20px; width: 150px; margin-left: 30px">Project</button></a>
+    </header>
+
+    <main>
+        <h1>Testing Nav tag:</h1>
+        <a href="contact.html">Contact</a> |
+        <a href="homepage.html">Homepage</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="project.html">Project</a> |
+        <h3> Testing code tag</h3>
+        <p>My favorite CSS element is <code>font-size</code></p>
+
+        <pre>
+I am testing "pre" tag, let put a space here:  ...
+        </pre>
+
+        <h2>I have a pokemon, it will change based on the size of your screen</h2>
+        <picture>
+            <source media="(min-width:1500px)" srcset="charizard.png">
+            <source media="(min-width:1000px)" srcset="005.png">
+            <img src="004.png">
+        </picture>
+        <h2>This is the sound of that pokemon</h2>
+        <audio controls>
+            <source src="char_sound.mp3">
+        </audio>
+
+        <h2>Choose your favorite starter pokemon:</h2>
+        <label for="Pokemon" style="font-size: 30px;">Choose a starter pokemon</label>
+        <select name="pokemon" id="choose_pokemon" style="font-size: 30px;">
+            <option value = "charmander">Charmander</option>
+            <option value = "bulbasaur">Bulbasaur</option>
+            <option value = "squirtle">Squirtle</option>
+        </select>
+
+        <h2>Trying canvas tag:</h2>
+        <canvas id="rectangle" width="200" height="100" style="border:1px solid black;"></canvas>
+        <script>
+            var vanvas = document.getElementById("rectangle");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(20, 20, 100, 50);
+        </script>
+
+        <h2>Trying datalist tag:</h2>
+        <label for="choose_car" style="font-size: 30px;">Choose a car</label>
+        <input list="car" style="font-size: 20px;">
+        <datalist id="car">
+            <option value="Volvo">
+            <option value="Ferrari">
+            <option value="BMW">
+            <option value="Chervolet">
+        </datalist>
+
+        <h2>Trying caption tag</h2>
+        <table style="font-size: 25px">
+            <caption>Number of employees</caption>
+            <colgroup>
+                <col style="background-color: green;">
+                <col style="background-color: lightcoral">
+            </colgroup>
+            <tr>
+                <th>Company</th>
+                <th>Employee</th>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>XYZ</td>
+                <td> 1500</td>
+            </tr>
+        </table>
+
+        <figure>
+            <img src="charizard.png">
+            <figcaption style="font-size: 25px;">This is a charizard-my favorite pokemon</figcaption>
+        </figure>
+
+        <p style="font-size: 25px;"> My favorite soccer player is <del>Messi</del> <ins>Ronaldo</ins></p>
+
+        <search>
+            <form>
+                <input type="search" placeholder="put something here">
+            </form>
+        </search>
+
+        <dialog open>
+            This is a dialog
+        </dialog>
+
+        <hgroup style=" font-size: 25px;">
+            <h2>San Diego</h2>
+            <p>San Diego is a beautiful city and it has nice weather!</p>
+        </hgroup>
+
+        <dl style="font-size: 25px;">
+            <dt>Programming Languages</dt>
+            <dd>C/C++</dd>
+            <dd>Java</dd>
+
+            <dt>Pho</dt>
+            <dd>Ox tail</dd>
+        </dl>
+
+        <p style="font-size: 25px;"><dfn>Gravity</dfn> is the natural force that attracts objects toward the center of the Earth, or toward any other physical body having mass.</p>
+        <p style="font-size: 25px;">In pokemon emerald, we can press <kbd>w</kbd> to move foward and press <kbd>a</kbd> to go to the left.</p>
+
+        <template>
+            <h2>Placeholder for template</h2>
+        </template>
+
+        <custom-css>
+            <p>This is the custom CSS semantic</p>
+        </custom-css>
+    </main>
+</body>
