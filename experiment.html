@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en">
 
-
-<script>
-    document.write("Javascript is enable")
-</script>
-<hello-world></hello-world>
-<script>
-    class HelloWorld extends HTMLElement {
-        constructor() {
-            super(); 
-            this.innerHTML = "<p>Hello world!</p>"; 
-        }
-    }
-    customElements.define("hello-world", HelloWorld);
-</script>
-
 <noscript>
     <p>You are disabling JavaScript, if you want to have the best experience, please turn it on.</p>
 </noscript>
@@ -25,6 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="icon" href="dog.png">
+
+    <script>
+        document.write("Javascript is enable")
+    </script>
+    <hello-world></hello-world>
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super(); 
+                this.innerHTML = "<p>Hello world!</p>"; 
+            }
+        }
+        customElements.define("hello-world", HelloWorld);
+    </script>
 
     <style>
         body {
@@ -43,7 +42,7 @@
 <body>
     <header style = "background-color: #5d82c2; width: 100%; align-items: center; display: flex;">
         <h1 style="font-style: italic; font-size: 50px; padding: 0px 15px">Experiment</h1>
-        <a href="homepage.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 500px"><svg width="20" height="20"><circle cx="20" cy="20" r="30" fill="black"/></svg></button></a>
+        <a href="index.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 500px"><svg width="20" height="20"><circle cx="20" cy="20" r="30" fill="black"/></svg></button></a>
         <a href="contact.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Contact</button></a>
         <a href="resume.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Resume</button></a>
         <a href="project.html"><button style="padding: 10px 23px; font-size: 20px; width: 150px; margin-left: 30px">Project</button></a>
