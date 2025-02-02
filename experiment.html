@@ -26,11 +26,6 @@
     </script>
 
     <style>
-        body {
-            background-color: #d5e9e6; 
-            margin: 0;
-        }
-
         custom-css {
             font-size: 25px;
             color: red;
@@ -40,12 +35,12 @@
 </head>
 
 <body>
-    <header style = "background-color: #5d82c2; width: 100%; align-items: center; display: flex;">
-        <h1 style="font-style: italic; font-size: 50px; padding: 0px 15px">Experiment</h1>
-        <a href="index.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 500px"><svg width="20" height="20"><circle cx="20" cy="20" r="30" fill="black"/></svg></button></a>
-        <a href="contact.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Contact</button></a>
-        <a href="resume.html"><button style="padding: 10px 15px; font-size: 20px; width: 150px; margin-left: 30px">Resume</button></a>
-        <a href="project.html"><button style="padding: 10px 23px; font-size: 20px; width: 150px; margin-left: 30px">Project</button></a>
+    <header>
+        <h1>Experiment</h1>
+        <a href="index.html"><button><circle cx="20" cy="20" r="30" fill="black"/></svg></button></a>
+        <a href="contact.html"><button>Contact</button></a>
+        <a href="resume.html"><button>Resume</button></a>
+        <a href="project.html"><button>Project</button></a>
     </header>
 
     <main>
@@ -73,15 +68,15 @@ I am testing "pre" tag, let put a space here:  ...
         </audio>
 
         <h2>Choose your favorite starter pokemon:</h2>
-        <label for="Pokemon" style="font-size: 30px;">Choose a starter pokemon</label>
-        <select name="pokemon" id="choose_pokemon" style="font-size: 30px;">
+        <label for="Pokemon">Choose a starter pokemon</label>
+        <select name="pokemon" id="choose_pokemon">
             <option value = "charmander">Charmander</option>
             <option value = "bulbasaur">Bulbasaur</option>
             <option value = "squirtle">Squirtle</option>
         </select>
 
         <h2>Trying canvas tag:</h2>
-        <canvas id="rectangle" width="200" height="100" style="border:1px solid black;"></canvas>
+        <canvas id="rectangle" width="200" height="100"></canvas>
         <script>
             var vanvas = document.getElementById("rectangle");
             var ctx = canvas.getContext("2d");
@@ -90,8 +85,8 @@ I am testing "pre" tag, let put a space here:  ...
         </script>
 
         <h2>Trying datalist tag:</h2>
-        <label for="choose_car" style="font-size: 30px;">Choose a car</label>
-        <input list="car" style="font-size: 20px;">
+        <label for="choose_car">Choose a car</label>
+        <input list="car">
         <datalist id="car">
             <option value="Volvo">
             <option value="Ferrari">
@@ -100,11 +95,11 @@ I am testing "pre" tag, let put a space here:  ...
         </datalist>
 
         <h2>Trying caption tag</h2>
-        <table style="font-size: 25px">
+        <table>
             <caption>Number of employees</caption>
             <colgroup>
-                <col style="background-color: green;">
-                <col style="background-color: lightcoral">
+                <col>
+                <col>
             </colgroup>
             <tr>
                 <th>Company</th>
@@ -122,10 +117,10 @@ I am testing "pre" tag, let put a space here:  ...
 
         <figure>
             <img src="charizard.png">
-            <figcaption style="font-size: 25px;">This is a charizard-my favorite pokemon</figcaption>
+            <figcaption>This is a charizard-my favorite pokemon</figcaption>
         </figure>
 
-        <p style="font-size: 25px;"> My favorite soccer player is <del>Messi</del> <ins>Ronaldo</ins></p>
+        <p> My favorite soccer player is <del>Messi</del> <ins>Ronaldo</ins></p>
 
         <search>
             <form>
@@ -137,12 +132,12 @@ I am testing "pre" tag, let put a space here:  ...
             This is a dialog
         </dialog>
 
-        <hgroup style=" font-size: 25px;">
+        <hgroup>
             <h2>San Diego</h2>
             <p>San Diego is a beautiful city and it has nice weather!</p>
         </hgroup>
 
-        <dl style="font-size: 25px;">
+        <dl>
             <dt>Programming Languages</dt>
             <dd>C/C++</dd>
             <dd>Java</dd>
@@ -151,8 +146,8 @@ I am testing "pre" tag, let put a space here:  ...
             <dd>Ox tail</dd>
         </dl>
 
-        <p style="font-size: 25px;"><dfn>Gravity</dfn> is the natural force that attracts objects toward the center of the Earth, or toward any other physical body having mass.</p>
-        <p style="font-size: 25px;">In pokemon emerald, we can press <kbd>w</kbd> to move foward and press <kbd>a</kbd> to go to the left.</p>
+        <p><dfn>Gravity</dfn> is the natural force that attracts objects toward the center of the Earth, or toward any other physical body having mass.</p>
+        <p>In pokemon emerald, we can press <kbd>w</kbd> to move foward and press <kbd>a</kbd> to go to the left.</p>
 
         <template>
             <h2>Placeholder for template</h2>
