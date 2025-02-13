@@ -17,7 +17,6 @@
         }
 
         body {
-            border: 2px;
             background-color: color-mix(in srgb, lightblue 60%, green 30%);
             font-size: 25px;
             display: flex;
@@ -32,6 +31,35 @@
             width: 45%;
         }
         
+        @media (max-width: 1100px)
+        {
+            video {
+                width: 400px;
+            }
+            h2 {
+                font-size:25px;
+            }
+
+        }
+        @media (max-width: 700px)
+        {
+            body {
+                align-items: start;
+            }
+        }
+        @media (max-width: 600px)
+        {
+            video {
+                width: 300px;
+            }
+            h2 {
+                font-size:15px;
+            }
+            body {
+                font-size: 15px;
+                align-items: start;
+            }
+        }
     </style>
 </head>
 <body>
