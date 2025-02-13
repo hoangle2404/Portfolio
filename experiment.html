@@ -1,160 +1,74 @@
 <!DOCTYPE html>
 <html lang = "en">
-
 <head>
-    <title>Experiment</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
     <link rel="icon" href="dog.png">
 
-    <script>
-        document.write("Javascript is enable")
-    </script>
-    <script>
-        class HelloWorld extends HTMLElement {
-            constructor() {
-                super(); 
-                this.innerHTML = "<p>Hello world!</p>"; 
-            }
-        }
-        customElements.define("hello-world", HelloWorld);
-    </script>
-
     <style>
-        custom-css {
-            font-size: 50px;
-            color: red;
-            font-style: italic;
-            
-        }
+        .container {
+        display: flex;
+        height: 100vh; /* Full screen height */
+    }
+    
+    .left-section {
+        width: 30%;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .divider {
+        width: 2px; /* Thin vertical line */
+        background-color: black;
+        height: 100%; /* Full height */
+    }
+    
+    .right-section {
+        width: 70%;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     </style>
 </head>
-
 <body>
-    <noscript>
-        <p>You are disabling JavaScript, if you want to have the best experience, please turn it on.</p>
-    </noscript>
-
-    <header>
-        <h1>Experiment</h1>
-        <button onclick="document.location='index.html'">Home</button>
-        <button onclick="document.location='contact.html'">Contact</button>
-        <button onclick="document.location='resume.html'">Resume</button>
-        <button onclick="document.location='project.html'">Project</button>
-    </header>
-
-    <main>
-        <hello-world></hello-world>
-
-        <h1>Testing Nav tag:</h1>
-        <a href="contact.html">Contact</a> |
-        <a href="index.html">Homepage</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="project.html">Project</a> |
-        <h3> Testing code tag</h3>
-        <p>My favorite CSS element is <code>font-size</code></p>
-
-        <pre>
-I am testing "pre" tag, let put a space here:  ...
-        </pre>
-
-        <h2>I have a pokemon, it will change based on the size of your screen</h2>
-        <picture>
-            <source media="(min-width:1500px)" srcset="charizard.png">
-            <source media="(min-width:1000px)" srcset="005.png">
-            <img src="004.png" alt="Charmander">
-        </picture>
-        <h2>This is the sound of that pokemon</h2>
-        <audio controls>
-            <source src="char_sound.mp3">
-        </audio>
-
-        <h2>Choose your favorite starter pokemon:</h2>
-        <label for="choose_pokemon">Choose a starter pokemon</label>
-        <select name="pokemon" id="choose_pokemon">
-            <option value = "charmander">Charmander</option>
-            <option value = "bulbasaur">Bulbasaur</option>
-            <option value = "squirtle">Squirtle</option>
-        </select>
-
-        <h2>Trying canvas tag:</h2>
-        <canvas id="rectangle" width="200" height="100" style="border: black solid 1px;"></canvas>
-
-        <h2>Trying datalist tag:</h2>
-        <label for="car">Choose a car</label>
-        <input id="car" list="car_list">
-        <datalist id="car_list">
-            <option value="Volvo">
-            <option value="Ferrari">
-            <option value="BMW">
-            <option value="Chervolet">
-        </datalist>
-
-        <h2>Trying caption tag</h2>
-        <table>
-            <caption>Number of employees</caption>
-            <colgroup>
-                <col>
-                <col>
-            </colgroup>
-            <tr>
-                <th>Company</th>
-                <th>Employee</th>
-            </tr>
-            <tr>
-                <td>ABC</td>
-                <td>5000</td>
-            </tr>
-            <tr>
-                <td>XYZ</td>
-                <td> 1500</td>
-            </tr>
-        </table>
-
-        <figure>
-            <img src="charizard.png">
-            <figcaption>This is a charizard-my favorite pokemon</figcaption>
-        </figure>
-
-        <p> My favorite soccer player is <del>Messi</del> <ins>Ronaldo</ins></p>
-
-        <dialog open>
-            This is a dialog
-        </dialog>
-
-        <hgroup>
-            <h2>San Diego</h2>
-            <p>San Diego is a beautiful city and it has nice weather!</p>
-        </hgroup>
-
-        <dl>
-            <dt>Programming Languages</dt>
-            <dd>C/C++</dd>
-            <dd>Java</dd>
-
-            <dt>Pho</dt>
-            <dd>Ox tail</dd>
-        </dl>
-
-        <p><dfn>Gravity</dfn> is the natural force that attracts objects toward the center of the Earth, or toward any other physical body having mass.</p>
-        <p>In pokemon emerald, we can press <kbd>w</kbd> to move foward and press <kbd>a</kbd> to go to the left.</p>
-
-        <template>
-            <h2>Placeholder for template</h2>
-        </template>
-
-        <custom-css>
-            <p>This is the custom CSS semantic</p>
-        </custom-css>
-
-        <svg width="25" height="100">
-            <circle cx="50" cy="50" r="50" fill="red" />
-         </svg> 
-
-         <search>
-            <form>
-                <input type="search" placeholder="put something here">
-            </form>
-        </search>
-    </main>
+    <div class="container">
+        <div class="left-section">Left (30%)</div>
+        <div class="divider"></div>
+        <div class="right-section">Right (70%)</div>
+    </div>
 </body>
+
+
+
+
+
+<div class ="basic-info">
+    <img id='personal-img' src = "image/ava.jpg" width ="400" height="450" alt="My avatar">
+    <section id = 'divider' style="border: 2px black solid"></section>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, My name is <strong>Hoang Le</strong>. I am a Computer Science student at UCSD. I am passionate about software development, problem-solving, and building efficient, scalable applications. </p>
+        <p>I am specialize in React, SQL, Java, C/C++. My goal is to become a Software Engineer specializing in full-stack development.</p>
+        <p>I'm always looking for opportunities to learn new things to improve myself. I like playing soccer and going to swim outside of coding.</p>
+    </section>
+</div>
+
+<section id="skill-info">
+    <h2>Skill</h2>
+    <ul>
+        <li>C/C++: &nbsp;&nbsp;&nbsp; ★★★★☆</li>
+            
+        <li>Java: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+            
+        <li>Python: &nbsp;&nbsp;&nbsp; ★★★☆☆</li>
+            
+        <li>SQL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+            
+        <li>React: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+    </ul>
+</section>

@@ -1,0 +1,270 @@
+@font-face {
+    font-family: "customFont";
+    src: url("/font/QEPrintVersion.ttf");
+    font-display: swap;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(40px);
+    }
+
+}
+@keyframes slide2 {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(20px);
+    }
+
+}
+:root {
+    --menu-bg: rgb(126, 238, 163);
+    --content-bg: linear-gradient(to bottom right, lightblue, rgb(101, 86, 231));
+    --link-hover: red;
+    --bio-font: "customFont";
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+.general {
+    display: flex;
+    height: 100vh;
+}
+.menu {
+    width: 20dvw;
+    display:flex;
+    justify-items: center;
+    flex-direction: column;
+    background-color: var(--menu-bg, white);
+}
+
+.content-side {
+    width: 80dvw;
+    display:flex;
+    background: var(--content-bg, lightblue);
+}
+.about-me {
+    width: 45%;
+    align-content: center;
+    justify-content: center;
+    margin-left: 5dvw;
+}
+.skill {
+    display: flex;
+    justify-content:center;
+    width: 45%;
+    flex-direction: column;
+    margin-left: 10dvw;
+    font-size: 25px;
+}
+
+.about-me p {
+    font-family: var(--bio-font, Arial);
+}
+.avatar {
+    border-radius: 50%;
+    width:auto ;
+    height:auto;
+    margin-top: 15%;
+    margin-left: 10%;
+    max-height: 25%;
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    animation: 3s linear 1s slide infinite;
+}
+
+.link-to-others {
+    margin-top: 10rem;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    align-items: center;
+    font-style: oblique;
+}
+
+.link-to-others a {
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+}
+.link-to-others a:hover{
+    text-decoration: underline;
+    color: var(--link-hover, black);
+    font-size: 50px;
+}
+.link-to-others img {
+    vertical-align: middle; 
+    width : 30px;
+    height:30px;
+}
+
+.social-network{
+    margin-top: 10rem;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    align-items: center;
+    column-gap: 100px;
+}
+
+.social-network img {
+    vertical-align: middle; 
+    width : 70px;
+    height: 70px;
+}
+.social-network img:hover {
+    transform: rotate(-45deg);
+}
+
+.content-side h1,h2 {
+    color: rgb(23, 19, 226);
+}
+section:has(h1) {
+    color: black;
+    font-size: 35px;
+}
+span {
+    border-radius: 10%;
+    background-color: aquamarine;
+
+}
+#characteristic {
+    font-size: 30px;
+    height: 50px;
+    display: inline-block;
+}
+
+@media (max-width:1100px)
+{
+    .menu {
+        width: auto;
+        height: auto; 
+    }
+    .social-network {
+        gap:10px;
+
+    }
+    .social-network img {
+    width : 35px;
+    height: 35px;
+    }
+    .link-to-others {
+        font-size: 20px;
+    }
+    .content-side {
+        width: 100%;
+        height: 100%;
+    }
+    .avatar {
+    border-radius: 50%;
+    width:auto ;
+    height:auto;
+    margin-top: 15%;
+    margin-left: 10%;
+    max-height: 25%;
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    animation: 3s linear 1s slide2 infinite;
+    }
+    .about-me {
+        font-size: 25px;
+    }
+    .skill {
+        font-size: 25px;
+    }
+    .content-side h1,h2 {
+        font-size: 35px;
+    }
+    .link-to-others a:hover{
+        text-decoration: underline;
+        color: var(--link-hover, black);
+        font-size: 30px;
+    }
+}
+
+@media (max-width:600px) {
+    .menu {
+        width: auto;
+        height: auto;
+    }
+    .social-network {
+        gap:10px;
+
+    }
+    #characteristic {
+        font-size: 20px;
+        height: 50px;
+        display: inline-block;
+    }
+    .social-network img {
+    width : 20px;
+    height: 20px;
+    }
+    .link-to-others {
+        font-size: 20px;
+    }
+    .content-side {
+        width: none;
+        height: none;
+        overflow: scroll;
+    }
+    .avatar {
+    border-radius: 50%;
+    width:auto ;
+    height:auto;
+    margin-top: 15%;
+    margin-left: 10%;
+    max-height: 25%;
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    animation: 3s linear 1s slide2 infinite;
+    }
+    .about-me {
+        font-size: 20px;
+    }
+    .skill {
+        font-size: 15px;
+    }
+    .content-side h1,h2 {
+        font-size: 15px;
+    }
+    .link-to-others a:hover{
+        text-decoration: underline;
+        color: var(--link-hover, black);
+        font-size: 30px;
+    }
+}
+@media (max-height: 600px)
+{
+    .social-network {
+        margin-top: 50px;
+    }
+}
+@media (max-height: 900px)
+{
+    .social-network {
+        margin-top: 50px;
+    }
+    .social-network img {
+        width : 40px;
+        height: 40px;
+    }
+}

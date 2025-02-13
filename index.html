@@ -4,121 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoang Le's Website</title>
-    <link rel="icon" href="dog.png">
-
-    <style>
-        body {
-            border:5px;
-        }
-    </style>
+    <link rel="icon" href="/image/dog.png">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>Profile</h1>
-        <button onclick="document.location='experiment.html'">Experiment</button>
-        <button onclick="document.location='index.html'">Home</button>
-        <button onclick="document.location='contact.html'">Contact</button>
-        <button onclick="document.location='resume.html'">Resume</button>
-        <button onclick="document.location='project.html'">Project</button>
-    </header>
-
     <main>
-        <img src = "avatar.jpg" height ="450" alt="Me in Ba Na hill">
-        <table>
-                    <tr>
-                        <td>About Me</td>
-                        <td>Skill and Proficiency</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <section>
-                                <h2>Personal Info:</h2>
-                                <pre>
-Hi, my name is <b>Hoang Le</b>. I am a software engineer.
-I am learning <i>Computer Science</i> at <abbr title="University of California, San Diego">UCSD</abbr>.
-I like watching soccer and playing FIFA
-                    
+        <div class="general">
 
-<strong>I am an ambitious person and willing to learn new things.</strong>
-<em>I also spend 100% into what I'm doing to get the best result.</em>
-                                </pre>
-                            </section>
+            <div class="menu">
+                <img class="avatar" src = "/image/ava.jpg" alt="my avatar">
+                <nav class = "link-to-others">
+                    <a href = "project.html"><img src="/image/book.png" alt="project icon"> Project</a>
+                    <a href = "resume.html"><img src="/image/paper.png" alt="resume icon"> Resume</a>
+                    <a href = "feedback.html"><img src="/image/feedback.png" alt="feedback icon"> Feedback</a>
+                </nav>
+                <nav class="social-network">
+                    <a href="https://www.facebook.com/profile.php?id=100009815346979"><img src="/image/facebook.png" alt="link to my Facebook"></a>
+                    <a href="https://x.com/home"><img src="/image/twitter.png" alt="link to my X.com"></a>
+                    <a href="https://www.instagram.com/leehoangminh/"><img src="/image/instagram.png" alt="link to my Instagram"></a>
+                    <a href="mailto:ronaldor82010@gmail.com"><img src="/image/gmail.png" alt ="link to my email address"></a>
+                </nav>
+            </div>
+
+            <div class="divide-border" style = "background-color: black; height: 100%; width: 2px;"></div>
+
+            <div class ="content-side">
+
+                <section class="about-me"> 
+                    <h1>About Me</h1>
+                    <p>Hello, my name is <strong>Hoang Le</strong>. I am a software engineer and currently attending at <abbr title="University of California, San Diego">UCSD</abbr> </p>
+                    <p>I'm 27 years old and currently living in San Diego. I'm an ambitious person and willing to learn new things to improve myself.</p>
+
+                    <section id="characteristic">
+                        <span>Curious</span>
+                        <span>Funny</span>
+                        <span>Hard-working</span>
+                    </section>
+                </section>
+
+                <section class="skill">
+                    <h2>Skill & Efficiency</h2>
+                    <ul>
+                        <li>C/C++: &nbsp;&nbsp;&nbsp; ★★★★☆</li>
                             
-                            <section>
-                                <h2>My favorite quote is:</h2>
-                                <blockquote>"The only way to do great work is to love what you do."</blockquote> 
-                                <p><cite>Steve Jobs</cite></p>  
-                            </section>
-                        </td>
-                            <td>
-                                <ul>
-                                    <li>C/C++: &nbsp;&nbsp;&nbsp; ★★★★☆</li>
-                                    
-                                    <li>Java: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
-                                    
-                                    <li>Python: &nbsp;&nbsp;&nbsp; ★★★☆☆</li>
-                                    
-                                    <li>SQL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
-                                    
-                                    <li>React: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
-                                </ul>
-                            </td>
-                    </tr>
-        </table>
-        <div class="basic_info_and_goal">
-            <div class = "basic_info">
-                <table>
-                    <tr>
-                        <th> Age</th>
-                        <td> 27</td>
-                    </tr>
-                    <tr>
-                        <th>Status</th>
-                        <td>Single</td>
-                    </tr>
-                    <tr>
-                        <th>Location</th>
-                        <td>San Diego</td>
-                    </tr>
-                    <tr>
-                        <th>Occupation</th>
-                        <td>Software Engineer</td>
-                    </tr>
-                </table>
-                <br>
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span>
-                    Ambitious
-                </span>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span>
-                    Curious
-                </span> 
-            </div>
-
-            <div class="goal">
-                <h2>Goal</h2>
-                <ul>
-                    <li>Buy a house</li>
-                    <li>Save money for traveling</li>
-                    <li>Get a job</li>
-                </ul>
-            </div>
-
-            <div class = "motivation">
-                <h2> Motivation</h2>
-                <ul>
-                    <li>Have a great time.</li>
-                </ul>
+                        <li>Java: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+                            
+                        <li>Python: &nbsp;&nbsp;&nbsp; ★★★☆☆</li>
+                            
+                        <li>SQL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+                            
+                        <li>React: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ★★★★☆</li>
+                    </ul>
+                </section>
             </div>
         </div>
-
-        <a href="feedback.html">Feedback</a>
     </main>
-    <footer>
-        <p>More information will be updated in the future!</p>
-    </footer>
 </body>
