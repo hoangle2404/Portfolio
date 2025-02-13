@@ -252,12 +252,6 @@ span {
         font-size: 30px;
     }
 }
-@media (max-height: 600px)
-{
-    .social-network {
-        margin-top: 50px;
-    }
-}
 @media (max-height: 900px)
 {
     .social-network {
@@ -266,5 +260,11 @@ span {
     .social-network img {
         width : 40px;
         height: 40px;
+    }
+}
+@media (max-height: 600px)
+{
+    .social-network {
+        margin-top: 50px;
     }
 }
