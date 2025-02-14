@@ -82,7 +82,21 @@ body{
     justify-content: center;
     animation: 3s linear 1s slide infinite;
 }
-
+#characteristic {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 40px 40px;
+    flex-direction: column;
+    gap:30%;
+}
+span {
+    background-color: bisque;
+    border-radius: 5%;
+    width: 150px;
+    height:50px;
+    align-content: center;
+    text-align: center;
+}
 .link-to-others {
     margin-top: 10rem;
     font-size: 35px;
@@ -132,7 +146,7 @@ body{
     transform: rotate(-45deg);
 }
 
-.content-side h1,h2 {
+.content-side h1,h2, h3 {
     color: rgb(23, 19, 226);
 }
 section:has(h1) {
