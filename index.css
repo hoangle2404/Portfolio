@@ -202,16 +202,21 @@ section:has(h1) {
         color: var(--link-hover, black);
         font-size: 30px;
     }
+    #characteristic {
+        font-size: 15px;
+        gap: 50px;
+    }
+
+    span {
+        width:80px;
+        height: 40px;
+    }
 }
 
 @media (max-width:600px) {
-    .menu {
-        width: auto;
-        height: auto;
-    }
+
     .social-network {
         gap:10px;
-
     }
     .social-network img {
     width : 20px;
@@ -223,6 +228,7 @@ section:has(h1) {
     .content-side {
         overflow: scroll;
         flex-direction: column;
+        gap: 50px;
     }
     .avatar {
     border-radius: 50%;
@@ -249,6 +255,15 @@ section:has(h1) {
         text-decoration: underline;
         color: var(--link-hover, black);
         font-size: 30px;
+    }
+    #characteristic {
+        font-size: 15px;
+        gap: 50px;
+    }
+
+    span {
+        width:80px;
+        height: 40px;
     }
 }
 @media (max-height: 900px)
