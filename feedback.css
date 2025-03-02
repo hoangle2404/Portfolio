@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "customFont";
+    src: url("/font/QEPrintVersion.ttf");
+    font-display: swap;
+}
+:root {
+    background-color: var(--root-bg-color);
+}
+header {
+    font-family: customFont;
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+}
+body {
+    background-color: rgb(137, 154, 228);
+    font-size: 20px;
+}
+
+#fullname, #email, #comment {
+    display: grid;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--form-bg-color);
+    color: var(--form-color);
+}
+output {
+    display: block;
+}
+.emailDiv , .other{
+    padding-top: 5%;
+}
+output {
+    display: grid;
+    justify-items: center;
+}
+#req {
+    color: red;
+}
+hr {
+    margin: 0;
+}
+#error{
+    color: rgb(214, 12, 12);
+}
+input:placeholder-shown {
+    font-style: italic;
+}
+textarea:placeholder-shown {
+    font-style: italic;
+}
+#fullname:invalid,  #email:invalid {
+    background-color: lightsalmon;
+    box-shadow: 0 0 4px 2px red;
+}
+#fullname:valid, #email:valid {
+    background-color: lightgreen;
+}
+#errorEmail{
+    color: rgb(214, 12, 12);
+}
+output#info {
+    color: black;
+}
+output#info.danger {
+    color: rgb(196, 78, 11);
+}
+output#info.warning {
+    color: yellow;
+}
+output#info.error {
+    color: red;
+}
+button {
+    color: var(--button-color);
+    background-color: var(--button-bg-color);
+}
+[theme='dark_mode'] {
+    --header-bg-color: black;
+    --header-color: white;
+    --form-bg-color: black;
+    --form-color: white;
+    --root-bg-color: black;
+    --button-bg-color: rgb(190, 24, 102);
+    --button-color: rgb(206, 219, 19);
+}
+[theme='light_mode'] {
+    --button-bg-color: white;
+    --button-color: black;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="icon" href="/image/dog.png">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback</h1>
+        <button onclick="document.location='index.html'">Home</button>
+        <button onclick="document.location='resume.html'">Resume</button>
+        <button onclick="document.location='project.html'">Project</button>
+        <hr/>
+    </header>
+    <main>
+        <form action="https://httpbin.org/post" method="POST">
+            <fieldset>
+                <legend>Contact Me:</legend>
+                <div class="nameDiv">
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Hoang" pattern="[a-zA-Z]+" minlength="3" required>
+                </div>
+                
+                <div class="emailDiv">
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email" name="email" placeholder="abcxyz@gmail.com" required>
+                </div>
+                    
+                <div class="other">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="5" cols="50" placeholder="Comment here!" minlength="10"></textarea>
+                    <input type="hidden" name="possible_bot" id="possible_bot" value="True">
+                    <output id ="error" name="error" for="email">Error (for testing purpose)</output>
+                    <output name="info" for="infomation">Info (for testing purpose)</output>
+                </div>
+    
+                <input type="submit" value="Submit">
+                </fieldset>
+              </form>
+    </main>
+</body>
