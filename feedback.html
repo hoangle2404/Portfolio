@@ -106,10 +106,12 @@
                 if(!fullname.validity.valid) 
                 {
                     error_message();
+                    event.preventDefault();
                 }
                 if(!email.validity.valid)
                 {
                     error_email_message();
+                    event.preventDefault();
                 }
                 document.getElementById("form-errors").value = JSON.stringify(error_data);
             });
@@ -160,6 +162,11 @@
                 {
                     emailError.textContent = "Please enter a proper email address!";
                     addError('email','Miss type');
+                }
+                else if(email.validity.valueMissing)
+                {
+                    emailError.textContent = "Please enter your email."
+                    addError('email', "Missing Value");
                 }
                 emailError.className = 'flash active';
                 setTimeout(() => {
