@@ -16,11 +16,12 @@
         }
 
         body {
-            background: lightblue;
+            background: var(--body-bg-color);
             display: flex;
             flex-direction: column;
             align-items: center; 
         }
+
         @media (max-width: 1100px)
         {
             iframe{
@@ -35,14 +36,33 @@
                 height: 300px
             }
         }
+
+        [theme='dark_mode'] 
+        {
+            --body-bg-color: black;
+            color: white;
+            --a-color: rgb(41, 194, 221);
+        }
+        [theme='light_mode'] 
+        {
+            --button-bg-color: white;
+            --button-color: black;
+            --body-bg-color: rgb(137, 154, 228);
+        }
     </style>
 </head>
 <body>
+    <noscript>
+        <div class="no-js-warning">
+            Some features on this page need Javascript to function properly. Please enable Javascript to have the best experience.
+        </div>
+      </noscript>
     <header>
         <h1>Resume</h1>
         <button onclick="document.location='index.html'">Home</button>
         <button onclick="document.location='resume.html'">Resume</button>
         <button onclick="document.location='project.html'">Project</button>
+        <button name="toggle_theme" id="toggle_theme"></button>
     </header>
     <h1>You can find my resume here:</h1>
     <iframe src="Hoang_Le_Resume.pdf" title="Hoang Le's Resume" height="700" width="900"></iframe>
@@ -93,4 +113,30 @@
         <p>SQL</p>
         <p>Typescript</p>
     </details>
+
+    <script>
+        //basic set up for toggle theme 
+        const theme_button = document.getElementById('toggle_theme');
+        const currTheme = localStorage.getItem('theme');
+        document.documentElement.setAttribute('theme', currTheme);
+        theme_button.textContent = currTheme === 'light_mode' ? 'Toggle Theme ☀' : 'Toggle Theme 🌙';
+            
+        //handle the theme toggle 
+        theme_button.addEventListener('click', (event) => 
+        {
+            const theme_info = document.documentElement.getAttribute('theme');
+            if(theme_info === 'light_mode')
+            {
+                document.documentElement.setAttribute('theme', 'dark_mode');
+                localStorage.setItem('theme', 'dark_mode');
+                theme_button.textContent = 'Toggle Theme 🌙';
+            }
+            else 
+            {
+                document.documentElement.setAttribute('theme', 'light_mode');
+                localStorage.setItem('theme', 'light_mode');
+                theme_button.textContent = 'Toggle Theme ☀';
+            }
+        })
+    </script>
 </body>
