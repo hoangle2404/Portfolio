@@ -126,7 +126,6 @@ span {
 
 .social-network{
     margin-top: 10rem;
-    font-size: 25px;
     display: grid;
     grid-template-columns: 50px 50px;
     flex-direction: column;
@@ -143,7 +142,9 @@ span {
     height: 70px;
 }
 .social-network img:hover {
-    transform: rotate(-45deg);
+    font-size: 35px;
+    width : 100px;
+    height: 100px;
 }
 
 .content-side h1,h2, h3 {
