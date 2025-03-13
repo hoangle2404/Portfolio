@@ -80,7 +80,7 @@ body{
     max-width: 75%;
     display: flex;
     justify-content: center;
-    animation: 3s linear 1s slide infinite;
+    
 }
 #characteristic {
     font-size: 25px;
