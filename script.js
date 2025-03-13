@@ -136,8 +136,7 @@ const projectList = [
   
 projectList.forEach(project => addProject(project));
 */
-
-// Populate Projects
+// Load Projects
 function loadProject(projects) {
 
     const container = document.getElementById("card-container");
@@ -165,16 +164,15 @@ function loadLocalData() {
         const projects = JSON.parse(localData);
         loadProject(projects);
     } else {
-        console.log("There is no local project currently.");
         loadProject([]);
     }
 }
 
 async function loadRemoteData() {
+    //const remoteUrl = "https://api.jsonbin.io/v3/b/67d22aad8960c979a5707148"; 
     const response = await fetch("https://api.jsonbin.io/v3/b/67d22be48a456b796674abae");
     if(!response.ok)
     {
-        console.log('Fail to fetch data');
         return;
     }
     const data = await response.json();
