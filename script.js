@@ -168,11 +168,11 @@ function loadLocalData() {
     }
 }
 
-async function loadRemoteData() {
-    //const remoteUrl = "https://api.jsonbin.io/v3/b/67d22aad8960c979a5707148"; 
+async function loadRemoteData() { 
     const response = await fetch("https://api.jsonbin.io/v3/b/67d22be48a456b796674abae");
     if(!response.ok)
     {
+        loadProject([]);
         return;
     }
     const data = await response.json();
