@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Plateful",
+        "image": "../image/recipe_login.png",
+        "alt": "log in image of the website",
+        "author": "Hoang Le",
+        "description": "A website for users to post and view recipes. Users can interact with the recipes by rating, like and favorite the recipes.",
+        "link": "https://github.com/nguyenjh/CSE-110-Group-11"
+    },
+    {
+        "title": "Car Accident Prediction",
+        "image": "../image/ML.png",
+        "alt": "an overview about the project",
+        "author": "Hoang Le",
+        "description": "Machine learning models that predicting car accidents in NYC.",
+        "link": "https://github.com/devPach4545/CSE_151A"
+    },
+    {
+        "title": "NFA to DFA Converter",
+        "image": "../image/nfa.jpg",
+        "alt": "a picture of how the converter works",
+        "author": "Hoang Le",
+        "description": "Build a converter that convert NFA to DFA using Python. Code samples available upon request.",
+        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+    },
+    {
+        "title": "Huffman Coding",
+        "image": "../image/compress.png",
+        "alt": "exmple of how huffman coding works",
+        "author": "Hoang Le",
+        "description": "Compress and uncompress a file using C++. Code samples available upon request.",
+        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+    },
+    {
+        "title": "Graph Algorithms",
+        "image": "../image/graph.png",
+        "alt": "exmple of how huffman coding works",
+        "author": "Hoang Le",
+        "description": "Implement different graphing algorithms like BFS, DFS,etc using C++. Code samples available upon request.",
+        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+    }
+]

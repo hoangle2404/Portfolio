@@ -5,77 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
     <link rel="icon" href="dog.png">
-
-    <style>
-        @font-face {
-            font-family: "customFont";
-            src: url("/font/QEPrintVersion.ttf");
-            font-display: swap;
-        }
-        header {
-            font-family: customFont;
-        }
-
-        body {
-            background-color: var(--body-bg-color);
-            font-size: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        body button {
-            size: 35px;
-        }
-        a {
-            color: var(--a-color);
-        }
-        ol {
-            flex-direction: column;
-            width: 45%;
-        }
-        
-        @media (max-width: 1100px)
-        {
-            video {
-                width: 400px;
-            }
-            h2 {
-                font-size:25px;
-            }
-
-        }
-        @media (max-width: 700px)
-        {
-            body {
-                align-items: start;
-            }
-        }
-        @media (max-width: 600px)
-        {
-            video {
-                width: 300px;
-            }
-            h2 {
-                font-size:15px;
-            }
-            body {
-                font-size: 15px;
-                align-items: start;
-            }
-        }
-    [theme='dark_mode'] 
-    {
-        --body-bg-color: black;
-        color: white;
-        --a-color: rgb(41, 194, 221);
-    }
-    [theme='light_mode'] 
-    {
-        --button-bg-color: white;
-        --button-color: black;
-        --body-bg-color: rgb(137, 154, 228);
-    }
-    </style>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
     <header>
@@ -85,50 +15,11 @@
         <button onclick="document.location='project.html'">Project</button>
         <button name="toggle_theme" id="toggle_theme"></button>
     </header>
+    <button id="local">Load Local</button>
+    <button id="remote">Load Remote</button>
+    <main>
+        <div id="card-container"></div>
+    </main>
 
-    <h2>Here are some projects that I have done:</h2>
-    <ol>
-        <li><p>A website that allows users to see and post recipes</p>
-        <a href="https://github.com/nguyenjh/CSE-110-Group-11"><h3>Project Github</h3></a>
-        <h3>Video Demo</h3>
-        <video width = 500 controls>
-            <source src="video_demo.mp4" type="video/mp4">
-        </video></li>
-
-        <li><p>Machine learning models that predict the likelihood of car accident in New York</p>
-        <a href="https://github.com/devPach4545/CSE_151A">Project Github</a></li>
-
-        <li>Write a program in C++ that encodes and decodes a file</li>
-        <li>Write a program in C++ to implement a graph from a data file (.csv) and then find
-            the weighted/unweighted shortest Path from point A to point B, find the connected
-            components and the smallest threshold.
-        </li>
-        <li>Build a <b>minesweeper</b> like game using Java</li>
-    </ol>
-
-    <script>
-        //basic set up for toggle theme 
-        const theme_button = document.getElementById('toggle_theme');
-        const currTheme = localStorage.getItem('theme');
-        document.documentElement.setAttribute('theme', currTheme);
-        theme_button.textContent = currTheme === 'light_mode' ? 'Toggle Theme ☀' : 'Toggle Theme 🌙';
-            
-        //handle the theme toggle 
-        theme_button.addEventListener('click', (event) => 
-        {
-            const theme_info = document.documentElement.getAttribute('theme');
-            if(theme_info === 'light_mode')
-            {
-                document.documentElement.setAttribute('theme', 'dark_mode');
-                localStorage.setItem('theme', 'dark_mode');
-                theme_button.textContent = 'Toggle Theme 🌙';
-            }
-            else 
-            {
-                document.documentElement.setAttribute('theme', 'light_mode');
-                localStorage.setItem('theme', 'light_mode');
-                theme_button.textContent = 'Toggle Theme ☀';
-            }
-        })
-    </script>
+    <script src="script.js"></script>
 </body>

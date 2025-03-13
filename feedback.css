@@ -75,6 +75,10 @@ output#info.error {
 }
 button {
     color: var(--button-color);
+    size: 35px;
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
     background-color: var(--button-bg-color);
 }
 [theme='dark_mode'] {
@@ -83,10 +87,11 @@ button {
     --form-bg-color: black;
     --form-color: white;
     --root-bg-color: black;
-    --button-bg-color: rgb(190, 24, 102);
-    --button-color: rgb(206, 219, 19);
+    --button-color: black;
+    --button-bg-color: rgb(111, 238, 164);
 }
 [theme='light_mode'] {
     --button-bg-color: white;
     --button-color: black;
+    --button-bg-color: rgb(111, 238, 164);
 }
