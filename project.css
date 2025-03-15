@@ -40,6 +40,14 @@ a {
     }
 
 }
+.empty-output {
+    background-color: #3cc977;
+    color: black;
+    width: 30%;
+    text-align: center;
+    border-radius: 50px;
+    margin: auto;
+}
 #local, #remote{
     margin-top: 10px;
 }

@@ -1,0 +1,19 @@
+<details>
+                <summary>
+                    Courses taken
+                </summary>
+                <p>Intro to Machine Learning</p>
+                <p>Component and Design Techniques for Digital Systems</p>
+                <p>Design and Analysis of Algorithms, Mathematics for Algorithms and Systems</p>
+                <p>Theory of Computability</p>
+                <p>Advanced Data Structures in C++</p>
+                <p>Intermediate Java Programming</p>
+                <p>Computer Organization and Assembly Language</p>
+                <p>Intro to Computer Architecture: A Software Perspective</p>
+                <p>Software Engineering (React)</p>
+                <p>Database Systems Principles</p>
+                <p>Recommender Systems And Web Mining</p>
+                <p>Intro to AI: Probabilistic Models</p>
+                <p>Operating System Principles</p>
+            </details>
+        </details>

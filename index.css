@@ -84,19 +84,25 @@ body{
 }
 #characteristic {
     font-size: 25px;
-    display: grid;
-    grid-template-columns: 40px 40px;
-    flex-direction: column;
-    gap:30%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
 }
 span {
-    background-color: bisque;
-    border-radius: 5%;
+    background: linear-gradient(to bottom right, rgb(215, 231, 143), rgb(221, 159, 164));
+    border-radius: 30px;
     width: 150px;
-    height:50px;
+    height:80px;
     align-content: center;
     text-align: center;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
+span:hover{
+    background: linear-gradient(to bottom right, rgb(21, 199, 66), rgb(197, 230, 14));
+}
+
 .link-to-others {
     margin-top: 10rem;
     font-size: 35px;
@@ -154,7 +160,6 @@ section:has(h1) {
     color: black;
     font-size: 35px;
 }
-
 
 @media (max-width:1100px)
 {

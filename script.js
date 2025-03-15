@@ -82,70 +82,11 @@ class CardComponent extends HTMLElement {
 }
 
 customElements.define("project-card", CardComponent);
-/*
-//use to add projects to local storage
-function addProject(newProject) {
-    let localProjects = JSON.parse(localStorage.getItem("projects")) || [];
-    localProjects.push(newProject);
-    localStorage.setItem("projects", JSON.stringify(localProjects));
-    
-}
 
-const projectList = [
-    {
-        "title": "Plateful",
-        "image": "../image/recipe_login.png",
-        "alt": "log in image of the website",
-        "author": "Hoang Le",
-        "description": "A website for users to post and view recipes. Users can interact with the recipes by rating, like and favorite the recipes.",
-        "link": "https://github.com/nguyenjh/CSE-110-Group-11"
-    },
-    {
-        "title": "Car Accident Prediction",
-        "image": "../image/ML.png",
-        "alt": "an overview about the project",
-        "author": "Hoang Le",
-        "description": "Machine learning models that predicting car accidents in NYC.",
-        "link": "https://github.com/devPach4545/CSE_151A"
-    },
-    {
-        "title": "NFA to DFA Converter",
-        "image": "../image/nfa.jpg",
-        "alt": "a picture of how the converter works",
-        "author": "Hoang Le",
-        "description": "Build a converter that convert NFA to DFA using Python. Code samples available upon request.",
-        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
-    },
-    {
-        "title": "Huffman Coding",
-        "image": "../image/compress.png",
-        "alt": "exmple of how huffman coding works",
-        "author": "Hoang Le",
-        "description": "Compress and uncompress a file using C++. Code samples available upon request.",
-        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
-    },
-    {
-        "title": "Graph Algorithms",
-        "image": "../image/graph.png",
-        "alt": "exmple of how huffman coding works",
-        "author": "Hoang Le",
-        "description": "Implement different graphing algorithms like BFS, DFS,etc using C++. Code samples available upon request.",
-        "link": "https://github.com/hoangle2404/CSE100R/tree/main"
-    }
-];
-  
-projectList.forEach(project => addProject(project));
-*/
 // Load Projects
-function loadProject(projects) {
-
+function loadProject(projects) { 
     const container = document.getElementById("card-container");
-    container.innerHTML = ""; 
-
-    if (projects.length === 0) {
-        container.innerHTML = "<p>There is no project currently.</p>";
-        return;
-    }
+    container.innerHTML = "";
 
     projects.forEach(project => {
         let card = document.createElement("project-card");
@@ -159,27 +100,47 @@ function loadProject(projects) {
 }
 
 function loadLocalData() {
-    const localData = localStorage.getItem("projects");
+    const container = document.getElementById("card-container");
+    const localData = localStorage.getItem("local-projects");
     if (localData) {
-        const projects = JSON.parse(localData);
-        loadProject(projects);
+        const project = JSON.parse(localData);
+        loadProject(project);
     } else {
-        loadProject([]);
+        container.innerHTML = "<p class='empty-output'>The local storage is empty for now</p>";
     }
 }
 
+async function fetchLocal() {
+    const container = document.getElementById("card-container");
+      const response = await fetch("local.json");
+    if (!response.ok) 
+    {
+        throw new Error("Error fetching local data.");
+    }
+    const data = await response.json();
+    localStorage.setItem("local-projects", JSON.stringify(data));
+    loadLocalData();  
+  }
+ 
 async function loadRemoteData() { 
+    const container = document.getElementById("card-container");
     const response = await fetch("https://api.jsonbin.io/v3/b/67d22be48a456b796674abae");
     if(!response.ok)
     {
-        loadProject([]);
-        return;
+        container.innerHTML = "<p class='empty-output'>No remote project found.</p>";
     }
     const data = await response.json();
-    const projects = data.record;
-    loadProject(projects);
+    const project = data.record;
+    loadProject(project);
 }
 
-document.getElementById("local").addEventListener("click", loadLocalData);
+document.getElementById("local").addEventListener("click", () => {
+    const localData = localStorage.getItem("local-projects");
+    if (localData) {
+      loadLocalData();
+    } else {
+        fetchLocal();
+    }
+  });
 document.getElementById("remote").addEventListener("click", loadRemoteData);
-//window.addEventListener("DOMContentLoaded", loadLocalData);
+document.addEventListener("DOMContentLoaded", loadLocalData);
