@@ -101,8 +101,17 @@ span {
 
 span:hover{
     background: linear-gradient(to bottom right, rgb(21, 199, 66), rgb(197, 230, 14));
+    animation-name: rotate;
+    animation-duration: 1s;
 }
-
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }    
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .link-to-others {
     margin-top: 10rem;
     font-size: 35px;
