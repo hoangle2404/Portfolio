@@ -71,7 +71,8 @@ class CardComponent extends HTMLElement {
 
             <h2>${this.getAttribute("title")}</h2>
             <picture>
-                <img src="${this.getAttribute("image")}" 
+                <source media="(orientation: landscape)" srcset="${this.getAttribute("image")}"/>
+                <img src="../image/project.png" 
                      alt="${this.getAttribute("alt") || this.getAttribute("title")}">
             </picture>
             <small>Author: ${this.getAttribute("author")}</small>
