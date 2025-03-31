@@ -1,51 +1,58 @@
 [
-    {
-      "title": "Plateful",
-      "image": "../image/recipe_login.png",
-      "alt": "log in image of the website",
-      "author": "Hoang Le",
-      "description": "A website for users to post and view recipes. Users can interact with the recipes by rating, like and favorite the recipes.",
-      "link": "https://github.com/nguyenjh/CSE-110-Group-11"
-    },
-    {
-      "title": "Car Accident Prediction",
-      "image": "../image/ML.png",
-      "alt": "an overview about the project",
-      "author": "Hoang Le",
-      "description": "Machine learning models that predicting car accidents in NYC.",
-      "link": "https://github.com/devPach4545/CSE_151A"
-    },
-    {
-      "title": "NFA to DFA Converter",
-      "image": "../image/nfa.jpg",
-      "alt": "a picture of how the converter works",
-      "author": "Hoang Le",
-      "description": "Build a converter that convert NFA to DFA using Python. Code samples available upon request.",
-      "link": "https://www.google.com/"
-    },
-    {
-      "title": "Huffman Coding",
-      "image": "../image/compress.png",
-      "alt": "exmple of how huffman coding works",
-      "author": "Hoang Le",
-      "description": "Compress and uncompress a file using C++. Code samples available upon request.",
-      "link": "https://www.google.com/"
-    },
-    {
-      "title": "Graph Algorithms",
-      "image": "../image/graph.png",
-      "alt": "exmple of how huffman coding works",
-      "author": "Hoang Le",
-      "description": "Implement different graphing algorithms like BFS, DFS,etc using C++. Code samples available upon request.",
-      "link": "https://www.google.com/"
-    },
-    {
-        "title": "Local Project",
-        "image": "../image/house.jpg",
-        "alt": "house picture",
-        "author": "Hoang Le",
-        "description": "Build a house.",
-        "link": "https://www.google.com/"
-      }
-
-  ]
+  {
+    "title": "Plateful",
+    "image": "../image/recipe_login.png",
+    "alt": "log in image of the website",
+    "author": "Hoang Le, Julie Nguyen, Lele Zhao, Alex, Foster",
+    "description": "A website for users to post and view recipes. Users can interact with the recipes by rating, like and favorite the recipes.",
+    "link": "https://github.com/nguyenjh/CSE-110-Group-11"
+  },
+  {
+    "title": "Car Accident Prediction",
+    "image": "../image/ML.png",
+    "alt": "an overview about the project",
+    "author": "Hoang Le",
+    "description": "Machine learning models that predicting car accidents in NYC.",
+    "link": "https://github.com/devPach4545/CSE_151A"
+  },
+  {
+    "title": "NFA to DFA Converter",
+    "image": "../image/nfa.jpg",
+    "alt": "a picture of how the converter works",
+    "author": "Hoang Le",
+    "description": "Build a converter that convert NFA to DFA using Python. Code samples available upon request.",
+    "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+  },
+  {
+    "title": "Huffman Coding",
+    "image": "../image/compress.png",
+    "alt": "exmple of how huffman coding works",
+    "author": "Hoang Le",
+    "description": "Compress and uncompress a file using C++. Code samples available upon request.",
+    "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+  },
+  {
+    "title": "Graph Algorithms",
+    "image": "../image/graph.png",
+    "alt": "BFS and DFS algorithms",
+    "author": "Hoang Le",
+    "description": "Implement different graphing algorithms like BFS, DFS,etc using C++. Code samples available upon request.",
+    "link": "https://github.com/hoangle2404/CSE100R/tree/main"
+  },
+  {
+    "title": "PM2.5 Emissions Analysis",
+    "image": "../image/pollution.webp",
+    "alt": "PM2.5 emissions",
+    "author": "Hoang Le, Uyen Le, Dat Ung",
+    "description": "The project looks at how low wind speeds (below 10 m/s) affect PM2.5 emissions in urban India, specifically comparing petrol and diesel vehicles during heavy traffic. Using a dataset of 10,000 vehicle emissions, we focused on urban areas with wind speeds under 10 m/s and relevant emission data.",
+    "link": "https://github.com/hoangle2404/Group115_WI25"
+  },
+  {
+    "title": "Probalistic Agents",
+    "image": "../image/stock.jpg",
+    "alt": "Stock MArket prediction",
+    "author": "Hoang Le, Uyen Le, Dat Ung, Yifan Zhu",
+    "description": "Build different agents to predict the market trend using Basian Network, HMM, and Reinforcement Learning.",
+    "link": "https://github.com/maynhile13105/AI-Probabilistic-Model"
+  }
+]

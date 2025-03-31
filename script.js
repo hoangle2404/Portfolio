@@ -125,7 +125,7 @@ async function fetchLocal() {
  
 async function loadRemoteData() { 
     const container = document.getElementById("card-container");
-    const response = await fetch("https://api.jsonbin.io/v3/b/67d65da08a456b796676b350");
+    const response = await fetch("https://api.jsonbin.io/v3/b/67e709bc8561e97a50f4d242");
     if(!response.ok)
     {
         container.innerHTML = "<p class='empty-output'>No remote project found.</p>";
